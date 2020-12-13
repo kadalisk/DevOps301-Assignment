@@ -38,7 +38,7 @@ node {
           ]
         }''',
         buildName: 'petclinic',
-        buildNumber: ${env.BUILD_DISPLAY_NAME}
+        buildNumber: ${currentBuild.number}
       )
     }
 
