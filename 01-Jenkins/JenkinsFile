@@ -34,4 +34,14 @@ node {
 
   }
 
+  def ansible_path="03-Ansible/01-Tomcat/"
+
+  dir(ansible_path){
+
+    stage('Ansible Deployment') {
+      sh 'ansible-playbook petclinic-webserver.yaml'
+    }
+
+  }
+
 }

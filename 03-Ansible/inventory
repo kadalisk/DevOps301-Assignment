@@ -1,0 +1,8 @@
+[docker-container]
+172.17.0.2
+172.17.0.3
+
+
+[docker-container:vars]
+ansible_ssh_user=root
+ansible_ssh_pass=redhat
