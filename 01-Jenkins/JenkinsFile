@@ -1,0 +1,33 @@
+node {
+
+ stage('Git CheckOut') {
+    git branch: 'main', url: 'https://github.com/kadalisk/DevOps301-Assignment.git'
+ }
+
+ def project_path="00-Application/petclinic-code"
+
+ dir(project_path) {
+
+ stage('Maven Clean') {
+    sh 'mvn clean'
+ }
+
+  stage('Maven Compile') {
+    sh 'mvn compile'
+ }
+
+ stage('Maven Testing') {
+    sh 'mvn test'
+ }
+
+ stage('Maven Package') {
+    sh 'mvn package'
+ }
+
+ stage('Archive Artifacts') {
+    archive 'target/*.war'
+ }
+
+}
+
+}
