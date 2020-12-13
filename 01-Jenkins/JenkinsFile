@@ -26,8 +26,20 @@ node {
       }
     }
 
-    stage('Archive Artifacts') {
-      archive 'target/*.war'
+    stage('Archive Artifacts to Artifactory') {
+      rtUpload (
+        serverId: 'local-artifactory',
+        spec: '''{
+          "files": [
+            {
+              "pattern": "**/*.war",
+    		  "target": "generic-snapshot/"
+            }
+          ]
+        }''',
+        buildName: 'petclinic',
+        buildNumber: ${env.BUILD_DISPLAY_NAME}
+      )
     }
 
     stage('Pre-Setup for Ansible') {
