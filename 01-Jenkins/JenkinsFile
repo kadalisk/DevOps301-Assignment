@@ -1,61 +1,70 @@
 node {
 
-  stage('Git CheckOut') {
-    git branch: 'main', url: 'https://github.com/kadalisk/DevOps301-Assignment.git'
-  }
+  try {
 
-  def project_path="00-Application/petclinic-code"
-
-  dir(project_path) {
-
-    stage('Maven Clean') {
-      sh 'mvn clean'
+    stage('Git CheckOut') {
+      git branch: 'main', url: 'https://github.com/kadalisk/DevOps301-Assignment.git'
     }
 
-    stage('Maven Compile') {
-      sh 'mvn compile'
-    }
+    def project_path="00-Application/petclinic-code"
 
-    stage('Maven Testing') {
-      sh 'mvn test'
-    }
+    dir(project_path) {
 
-    stage('Maven Package & SonarQube Analysis') {
-      withSonarQubeEnv('sonar-cube') {
-        sh 'mvn package sonar:sonar'
+      stage('Maven Clean') {
+        sh 'mvn clean'
       }
+
+      stage('Maven Compile') {
+        sh 'mvn compile'
+      }
+
+      stage('Maven Testing') {
+        sh 'mvn test'
+      }
+
+      stage('Maven Package & SonarQube Analysis') {
+        withSonarQubeEnv('sonar-cube') {
+          sh 'mvn package sonar:sonar'
+        }
+      }
+
+      stage('Archive Artifacts to Artifactory') {
+        rtUpload (
+          serverId: 'local-artifactory',
+          spec: '''{
+            "files": [
+              {
+                "pattern": "**/*.war",
+      		  "target": "generic-snapshot/"
+              }
+            ]
+          }''',
+          buildName: 'petclinic',
+          buildNumber: '1'
+        )
+
+      }
+
+      stage('Pre-Setup for Ansible') {
+        sh 'cp -rf target/*.war ../../03-Ansible/01-Tomcat/files/'
+      }
+
     }
 
-    stage('Archive Artifacts to Artifactory') {
-      rtUpload (
-        serverId: 'local-artifactory',
-        spec: '''{
-          "files": [
-            {
-              "pattern": "**/*.war",
-    		  "target": "generic-snapshot/"
-            }
-          ]
-        }''',
-        buildName: 'petclinic',
-        buildNumber: '1'
-      )
+    def ansible_path="03-Ansible/01-Tomcat/"
+
+    dir(ansible_path){
+
+      stage('Ansible Deployment') {
+        sh 'ansible-playbook petclinic-webserver.yaml'
+      }
+
     }
 
-    stage('Pre-Setup for Ansible') {
-      sh 'cp -rf target/*.war ../../03-Ansible/01-Tomcat/files/'
-    }
+  emailext body: 'Petclinic Pipeline completed', subject: 'Petclinic Pipeline Job started', to: 'kadalisk@gmail.com'
 
-  }
-
-  def ansible_path="03-Ansible/01-Tomcat/"
-
-  dir(ansible_path){
-
-    stage('Ansible Deployment') {
-      sh 'ansible-playbook petclinic-webserver.yaml'
-    }
-
+  } catch (err) {
+    emailext body: '${err}', subject: 'Petclinic Pipeline Job Failed', to: 'kadalisk@gmail.com'
   }
 
 }
