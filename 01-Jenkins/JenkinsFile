@@ -39,8 +39,7 @@ node {
               }
             ]
           }''',
-          buildName: 'petclinic',
-          buildNumber: $BUILD_NUMBER
+          buildName: 'petclinic'
         )
 
         rtPublishBuildInfo(serverId: 'local-artifactory')
