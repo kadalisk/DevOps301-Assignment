@@ -61,10 +61,10 @@ node {
 
     }
 
-  emailext body: 'Petclinic Pipeline completed', subject: 'Petclinic Pipeline Job started', to: 'kadalisk@gmail.com'
+  emailext body: '$DEFAULT_CONTENT', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - SUCCESSFUL', to: 'kadalisk@gmail.com'
 
   } catch (err) {
-    emailext body: '${err}', subject: 'Petclinic Pipeline Job Failed', to: 'kadalisk@gmail.com'
+    emailext body: '$DEFAULT_CONTENT', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - ERROR!', to: 'kadalisk@gmail.com'
   }
 
 }
