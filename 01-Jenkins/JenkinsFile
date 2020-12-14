@@ -39,7 +39,6 @@ node {
               }
             ]
           }''',
-          buildName: 'petclinic'
         )
 
         rtPublishBuildInfo(serverId: 'local-artifactory')
