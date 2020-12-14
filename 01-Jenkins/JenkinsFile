@@ -67,6 +67,7 @@ node {
 
   } catch (err) {
     emailext body: '$DEFAULT_CONTENT', subject: '$PROJECT_NAME - Build # $BUILD_NUMBER - ERROR!', to: 'kadalisk@gmail.com'
+    throw err
   }
 
 }
