@@ -1,0 +1,246 @@
+    1  pwd
+    2  whoami
+    3  su -
+    4  ls -lrta
+    5  ps -f
+    6  ps 
+    7  ps -f
+    8  java -version
+    9  exit
+   10  pwd
+   11  cd
+   12  whoami
+   13  mkdir
+   14  mkdir devops-301
+   15  cd devops-301/
+   16  ls
+   17  git status
+   18  git config --global
+   19  git config --global -e
+   20  clear
+   21  git config 
+   22  git config --get
+   23  git config --get-all
+   24  git config --list
+   25  git config --global -e
+   26  clear
+   27  git config --global
+   28  git config --list
+   29  git status
+   30  whoami
+   31  whichos
+   32  free -m
+   33  vmstat -s
+   34  cat /proc/meminfo
+   35  top
+   36  pwd
+   37  sudo su
+   38  sudo su -
+   39  cd
+   40  ll
+   41  vi .profile 
+   42  ll
+   43  ls
+   44  cd devops-301/
+   45  ll
+   46  ls
+   47  clear
+   48  docker info
+   49  exit
+   50  PWD
+   51  pwd
+   52  clear
+   53  git status
+   54  ll
+   55  ls
+   56  cd
+   57  cd devops-301/
+   58  ll
+   59  cd ..
+   60  pwd
+   61  git clone https://github.com/kadalisk/devops-301.git
+   62  ll
+   63  ls
+   64  cd devops-301/
+   65  ll
+   66  git status
+   67  sudo su -
+   68  pwd
+   69  ll
+   70  mvn --version
+   71  sudo su -
+   72  pwd
+   73  cd
+   74  ll
+   75  ls
+   76  git clone https://github.com/amitvashisttech/devops301-mindtree-17Oct2020.git
+   77  cd devops301-mindtree-17Oct2020/
+   78  ll
+   79  cd 02-Jenkins/petclinic-code/
+   80  clear
+   81  mvn clean
+   82  mvn compile
+   83  mvn test
+   84  mvn package
+   85  sudo su -
+   86  cd
+   87  ll
+   88  cp -rf devops301-mindtree-17Oct2020/03-Tomcat/tomcat-users.xml   /opt/tomcat/conf/tomcat-users.xml
+   89  sudo su
+   90  pwd
+   91  sudo su -
+   92  ls
+   93  cd devops301-mindtree-17Oct2020/
+   94  ls
+   95  cd 02-Jenkins/petclinic-code/
+   96  ll
+   97  mvn --version
+   98  mvn clean
+   99  mvn compile
+  100  mvn test
+  101  mvn package
+  102  ls
+  103  ll
+  104  cd target/
+  105  ll
+  106  ll spring-petclinic-4.2.6-SNAPSHOT/
+  107  cd
+  108  ll
+  109  sudo su -
+  110  pwd
+  111  cd
+  112  sudo su -
+  113  ps -ef
+  114  clear
+  115  ls
+  116  sudo su -
+  117  ls
+  118  cd /root/tomcat
+  119  ls /root
+  120  sudo su -
+  121  sudo apt install xrdp
+  122  sudo systemctl enable --now xrdp
+  123  sudo ufw allow from any to any port 3389 proto tcp
+  124  sudo apt install xfce4 xfce4-goodies xorg dbus-x11 x11-xserver-utils
+  125  sudo apt install xrdp 
+  126  sudo systemctl status xrdp
+  127  sudo adduser xrdp ssl-cert  
+  128  sudo systemctl restart xrdp
+  129  sudo ufw allow from any to any port 3389 proto tcp
+  130  exit
+  131  ps -ef | grep -i tomcat
+  132  vi /opt/tomcat/webapps/manager/META-INF/context.xml
+  133  clear
+  134  ls
+  135  clear
+  136  ls
+  137  sudo su -
+  138  ls
+  139  exit
+  140  sudo su -
+  141  exit
+  142  sudo apt update
+  143  whoami
+  144  ll
+  145  ls -lrta
+  146  ls
+  147  cd devops301-mindtree-17Oct2020/
+  148  ll
+  149  git pull
+  150  cd 04-Docker/00-Setup/
+  151  ll
+  152  sudo ./docker-install.sh 
+  153  clear
+  154  docker info
+  155  sudo docker info
+  156  ps -ef
+  157  clear
+  158  ps -ef | grep -i docker
+  159  docker info
+  160  sudo su
+  161  docker ps
+  162  sudo su
+  163  git status
+  164  cd devops301-mindtree-17Oct2020/
+  165  ll
+  166  git status
+  167  git pull
+  168  git status
+  169  ll
+  170  cd 04-Docker/00-Setup/
+  171  ll
+  172  cat Day3-History.txt 
+  173  cd
+  174  docker ps
+  175  sudo su
+  176  pwd
+  177  cd /opt/
+  178  ll
+  179  cd -
+  180  ll
+  181  ls
+  182  cd
+  183  sudo su -
+  184  pwd
+  185  ls
+  186  cd devops301-mindtree-17Oct2020/
+  187  git pull
+  188  sudo su
+  189  ps -ef | grep -i jenkins
+  190  ip addr
+  191  vi /etc/ssh/sshd_config 
+  192  sudo su
+  193  clear
+  194  git pul
+  195  git pull
+  196  cd devops301-mindtree-17Oct2020/
+  197  git pull
+  198  sudo git pull
+  199  clear
+  200  ll
+  201  cd 05-Ansible/01-Inventory/
+  202  ll
+  203  vi inventory 
+  204  sudo su
+  205  pwd
+  206  sudo su
+  207  cd
+  208  ll
+  209  sudo su
+  210  ps -ef | grep -i jenkins
+  211  sudo su
+  212  cleark
+  213  cls
+  214  clear
+  215  pwd
+  216  ll
+  217  ps -ef | grep -i jenkins
+  218  clear
+  219  sudo su -
+  220  sudo su
+  221  PWD
+  222  pwd
+  223  clear
+  224  pwd
+  225  ps -ef | grep -i jenkins
+  226  sudo su 
+  227  history | grep -i tomcat
+  228  sudo su
+  229  pwd
+  230  sudo su
+  231  pwd
+  232  history
+  233  pwd
+  234  ll
+  235  cd DevOps301-Assignment/
+  236  ll
+  237  git pull
+  238  sudo su 
+  239  cd backup/
+  240  history > history_mtadmin.txt 
+  241  sudo history > history_mtadmin.txt
+  242  history -10
+  243  history 10
+  244  ll
+  245  sudo su
+  246  history > history_mtadmin.txt 

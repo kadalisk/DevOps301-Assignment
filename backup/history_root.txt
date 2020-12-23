@@ -1,0 +1,1000 @@
+   58  netstat -tulnp | grep -i 8080
+   59  ls
+   60  cat output.txt 
+   61  clear
+   62  ll
+   63  ls
+   64  ls -lrta /opt
+   65  pwd
+   66  ls
+   67  nohup java -jar jenkins.war --httpPort=9090 > output.txt &
+   68  ps -ef
+   69  clear
+   70  exit
+   71  ls
+   72  pwd
+   73  cd apache-tomcat-8.5.56/
+   74  ls
+   75  ./bin/catalina.sh start
+   76  exit
+   77  ls
+   78  cd apache-tomcat-8.5.56/
+   79  cd bin/
+   80  ls
+   81  ./catalina.sh start
+   82  chmod +x catalina.sh
+   83  ./catalina.sh start
+   84  ls
+   85  ll
+   86  ps -ef | grep -i tomcat
+   87  clear
+   88  cat /opt/tomcat/conf/tomcat-users.xml
+   89  cat /opt/tomcat/webapps/manager/META-INF/context.xml
+   90  clear
+   91  exit
+   92  ls
+   93  cd
+   94  pwd
+   95  cd /opt/tomcat/
+   96  ls
+   97  ll
+   98  ps -ef | grep -i catalina
+   99  cd /root/apache-tomcat-8.5.56/
+  100  ls
+  101  cd bin/
+  102  ll
+  103  ./catalina.sh stop
+  104  ps -ef | grep -i catalina
+  105  cd
+  106  ls
+  107  cd /opt/tomcat/
+  108  ll
+  109  ./bin/catalina.sh start
+  110  ll
+  111  cd webapps/
+  112  ll
+  113  cd petclinic/
+  114  ls
+  115  cd mana
+  116  cd manager
+  117  ll
+  118  cd ..
+  119  ls
+  120  cd manager/
+  121  ll
+  122  cd META-INF/
+  123  LL
+  124  ll
+  125  vi context.xml 
+  126  cd /opt/tomcat/conf/
+  127  ll
+  128  vi tomcat-users.xml 
+  129  exit
+  130  ls
+  131  cd apache-tomcat-8.5.56/
+  132  ll
+  133  cd webapps/
+  134  ll
+  135  cd ..
+  136  ll
+  137  vi ./conf/tomcat-users.xml
+  138  exit
+  139  whoami
+  140  pwd
+  141  cd /usr/
+  142  ll
+  143  exit
+  144  ll
+  145  docker info
+  146  clear
+  147  echo $hostname
+  148  hostname
+  149  docker run busybox echo "Welcome, Sureshhostname"
+  150  clear
+  151  docker run busybox echo "Welcome, Suresh\!"
+  152  docker images -ls
+  153  docker images --ls
+  154  docker images 
+  155  docker run busybox
+  156  docker ps
+  157  ls
+  158  cd devops301-mindtree-17Oct2020/
+  159  ll
+  160  git pull
+  161  clear
+  162  ls
+  163  cd 04-Docker/
+  164  ll
+  165  cd 00-Setup/
+  166  ll
+  167  vi Day3-History.txt 
+  168  docker ps
+  169  docker pull ubuntu
+  170  docker images
+  171  docker run -it ubuntu
+  172  clear
+  173  docker ps
+  174  docker exec 0e4aa4e7e484 ls -ltra
+  175  docker attach 0e4aa4e7e484
+  176  clear
+  177  docker ps
+  178  docker kill 0e4aa4e7e484
+  179  docker start 0e4aa4e7e484
+  180  docker stop 0e4aa4e7e484
+  181  docker ps
+  182  docker run -it ubuntu:16:04
+  183  cd
+  184  clear
+  185  docker info
+  186  docker run -it ubuntu:16.04
+  187  clear
+  188  docker ps
+  189  docker inspect b451239574e7
+  190  curl 172.17.0.2/hello.html
+  191  clear
+  192  docker ps
+  193  docker commit -p -m "SKK First Apache Image" b451239574e7 skk-apache-test-image:v1
+  194  docker ps
+  195  docker images
+  196  docker run skk-apache-test-image
+  197  docker run -it skk-apache-test-image
+  198  docker run -it skk-apache-test-image:v1
+  199  clear
+  200  docker ps
+  201  docker inspect b23ab7d792ea
+  202  curl 172.17.0.3/hello.html
+  203  clear
+  204  docker ps
+  205  docker exec b23ab7d792ea apache2ctl start
+  206  clear
+  207  curl 172.17.0.3/hello.html
+  208  clear
+  209  docker ps
+  210  docker images
+  211  docker attach 81e9f9fd265a
+  212  docker attach b23ab7d792ea
+  213  clear
+  214  exit
+  215  clear
+  216  docker s
+  217  docker ps
+  218  docker attach b23ab7d792ea
+  219  clear
+  220  docker ps
+  221  docker images
+  222  docker run skk-apache-test-image
+  223  docker run skk-apache-test-image:v1
+  224  clear
+  225  docker ps
+  226  docker run skk-apache-test-image:v1
+  227  docker ps
+  228  docker ps -a
+  229  docker run -it skk-apache-test-image:v1
+  230  clear
+  231  docker ps
+  232  docker commit -p -m "SKK Second Apache Image" 8a2c435c3f83 skk-apache-test-image:v2
+  233  docker ps
+  234  docker images
+  235  docker run skk-apache-test-image:v2
+  236  docker ps
+  237  docker run -it skk-apache-test-image:v2
+  238  clear
+  239  docker ps
+  240  curl 172.17.0.4/hello.html
+  241  clear
+  242  docker ps
+  243  docker images
+  244  clear
+  245  ll
+  246  cd devops3
+  247  cd devops301-mindtree-17Oct2020/
+  248  git pull
+  249  ls
+  250  clear
+  251  ls
+  252  git pull
+  253  ls
+  254  cd o4
+  255  cd 04-Docker/
+  256  ls
+  257  cd 02-Dockerfile/
+  258  ls
+  259  clear
+  260  cd apache/
+  261  ls
+  262  docker build -t skk-apache-df-image:v1 .
+  263  clear
+  264  docker images
+  265  docker run -d skk-apache-df-image
+  266  docker run -d skk-apache-df-image:v1
+  267  docke rps
+  268  docker ps
+  269  docker inspect 6b0744c5fecf
+  270  clear
+  271  curl 172.17.0.1
+  272  curl 172.17.0.2
+  273  curl 172.17.0.1/info.html
+  274  curl 172.17.0.2/info.html
+  275  clear
+  276  docker ps
+  277  ls
+  278  cp Dockerfile Dockerfile2
+  279  ls
+  280  vi Dockerfile2
+  281  docker build -t skk-apache-df-image2:v1 ./Dockerfile2
+  282  docker build -t skk-apache-df-image2:v1 .
+  283  lsd
+  284  vi Dockerfile
+  285  vi Dockerfile2
+  286  docker build -t skk-apache-df-image2:v1 .
+  287  mv Dockerfile Dockerfile3d
+  288  docker build -t skk-apache-df-image2:v1 .
+  289  ls
+  290  git pull
+  291  git status
+  292  git checkout Dockerfile
+  293  ll
+  294  vi Dockerfile
+  295  docker images
+  296  docker rmi skk-apache-df-image2
+  297  docker rmi skk-apache-df-image2:v1
+  298  docker images
+  299  clear
+  300  ll
+  301  gi pull
+  302  git pull
+  303  clear
+  304  git status
+  305  ip addr
+  306  clear
+  307  docker ps
+  308  docker run -d --name skk-apache-nw-test -p 80:80 skk-apache-df-image:v1 
+  309  docker ps
+  310  docker stop $(docker ps -eq)
+  311  docker ps -e
+  312  docker ps -q
+  313  docker ps -qa
+  314  cd ../../../
+  315  git status
+  316  git pull
+  317  cd 04-Docker/
+  318  ll
+  319  cd 02-Dockerfile/
+  320  ll
+  321  cd tomcat/
+  322  ll
+  323  vi Dockerfile 
+  324  docker images
+  325  docker build -t skk-tomcat:v1 .
+  326  docker images
+  327  docker ps
+  328  docker run -d --name skk-test-tomcat -P skk-tomcat:v1
+  329  docker ps
+  330  clear
+  331  vi Dockerfile 
+  332  docker ps
+  333  vi Dockerfile ls -ltrac
+  334  vi Dockerfile ls -ltra
+  335  ls 
+  336  ls -lrt
+  337  clear
+  338  cp ../../../02-Jenkins/petclinic-code/target/petclinic.war .
+  339  ls
+  340  ls -ltr
+  341  docker build -t skk-tomcat:v1 .
+  342  docker ps
+  343  docker kill d31512d89093
+  344  docker run -d --name skk-test-tomcat -P skk-tomcat:v1
+  345  docker ps -a
+  346  docker rm d31512d89093
+  347  docker run -d --name skk-test-tomcat -P skk-tomcat:v1
+  348  docker ps
+  349  ls
+  350  nohup java -jar jenkins.war --httpPort=9090 > output.txt &
+  351  ps -ef
+  352  ps -ef | grep -i jenkins
+  353  nohup java -jar jenkins.war --httpPort=9090 > output.txt &
+  354  clear
+  355  exit
+  356  git pull
+  357  pwd
+  358  ll
+  359  cd 04-Docker/
+  360  ls
+  361  cd 03-DockerCompose/
+  362  ll
+  363  cd Jfrog-Artifact/
+  364  ls
+  365  docker-compose up
+  366  apt-get install docker-compose
+  367  docker ps
+  368  docker-compose up
+  369  vi docker-compose.yaml 
+  370  docker-compose up
+  371  ap-get uninstall docker-compose
+  372  which docker-compose
+  373  rm /usr/bin/docker-compose
+  374  which docker-compose
+  375  sudo curl -L "https://github.com/docker/compose/releases/download/1.27.4/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+  376  sudo chmod +x /usr/local/bin/docker-compose
+  377  which docker-compose
+  378  clear
+  379  docker-compose up
+  380  ll
+  381  sudo ln -s /usr/local/bin/docker-compose /usr/bin/docker-compose
+  382  docker-compose --version
+  383  docker-compose up
+  384  docker ps
+  385  docker-compose up -d
+  386  docker ps
+  387  cd ../../../../..
+  388  pwd
+  389  cd
+  390  cd /home/mtadmindev8/devops301-mindtree-17Oct2020/04-Docker/03-DockerCompose
+  391  git status
+  392  git pull
+  393  ll
+  394  cd sonarqube/
+  395  ll
+  396  docker-composer up -d
+  397  docker-compose up -d
+  398  docker-compose ps
+  399  docker ps
+  400  docker-compose ps
+  401  docker ps
+  402  ll
+  403  vi docker-compose.yaml 
+  404  docker-compose stop
+  405  clear
+  406  sysctl -w vm.max_map_count=262144
+  407  vi docker-compose.yaml 
+  408  docker-compose up -d
+  409  docker ps
+  410  clear
+  411  cd
+  412  cd .jenkins/
+  413  ll
+  414  cd
+  415  pwd
+  416  clear
+  417  apt-get install ansible sshpas
+  418  apt-get install ansible sshpass
+  419  ansible --versioin
+  420  ansible --version
+  421  apt-get update
+  422  cat /root/.sssh
+  423  cat /root/.ssh
+  424  ll
+  425  cd .ssh/
+  426  ll
+  427  docker start ubuntu:16.04
+  428  clear
+  429  docker images
+  430  docker start
+  431  docker start ubuntu:16.04
+  432  docker run -d --name worker1 ubuntu:16.04
+  433  docker run -d --name worker2 ubuntu:16.04
+  434  docker ps
+  435  uname -a
+  436  clear
+  437  cd
+  438  docker run -d --name worker1 ubuntu:16.04
+  439  docker contrainer
+  440  docker ps
+  441  docker image ls
+  442  docker images
+  443  docker help
+  444  docker container ls
+  445  docker container ls -a
+  446  docker run 9007a63595aa
+  447  docker exec -it 9007a63595aa
+  448  docker run -it 9007a63595aa
+  449  history
+  450  docker run -dit --name worker1 ubuntu:16.04
+  451  docker container ls -a
+  452  docker start 9007a63595aa
+  453  docker container ls
+  454  docker container ls -a
+  455  docker start -it  9007a63595aa
+  456  docker start -i 9007a63595aa
+  457  docker container ls -a
+  458  docker rm 5a68349d5321 9007a63595aa
+  459  docker run -dit --name worker1 ubuntu:16.04
+  460  docker run -dit --name worker2 ubuntu:16.04
+  461  docker container ls -a
+  462  docker container ls
+  463  docker clear
+  464  clear
+  465  docker container ls
+  466  docker exec 909cdb69c94b "ip addr"
+  467  history
+  468  clear
+  469  docker container ls
+  470  docker exec 909cdb69c94b ip addr
+  471  history
+  472  clear
+  473  docker container ls
+  474  docker attach 909cdb69c94b
+  475  docker container ls
+  476  docker inspect 909cdb69c94b
+  477  docker inspect 183b7962144b
+  478  docker inspect 909cdb69c94b
+  479  docker inspect 183b7962144b
+  480  clear
+  481  exit
+  482  vi inventory 
+  483  docker container ls
+  484  docker exec 909cdb69c94b apt-get install python open-ssh -y
+  485  docker exec 909cdb69c94b apt-get install python open-ssh-server open-ssh-client -y
+  486  docker exec 909cdb69c94b apt-get install python openssh-server openssh-client -y
+  487  clear
+  488  docker container ls
+  489  docker exec fb11d048d65b apt-get install python openssh-server openssh-client -y
+  490  docker exec fb11d048d65b apt-get update
+  491  docker exec fb11d048d65b apt-get install python openssh-server openssh-client -y
+  492  clear
+  493  docker container ls
+  494  docker inpect 909cdb69c94b
+  495  docker inspect 909cdb69c94b
+  496  clear
+  497  docker container ls
+  498  docker inspect fb11d048d65b
+  499  :q!
+  500  clear
+  501  vi inventory 
+  502  ip addr
+  503  clear
+  504  docker container ls
+  505  docker inspect 909cdb69c94b fb11d048d65b
+  506  clear
+  507  docker container ls
+  508  docker exec 909cdb69c94b passwd
+  509  docker attach worker1
+  510  docker attach worker2
+  511  docker exec worker1 grep -i "PermitRootLogin"
+  512  docker exec worker1 grep -i "PermitRootLogin" /etc/ssh/sshd_config
+  513  docker exec worker1 sed -i "s/PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
+  514  docker exec worker1 grep -i "PermitRootLogin" /etc/ssh/sshd_config
+  515  docker exec worker2 grep -i "PermitRootLogin" /etc/ssh/sshd_config
+  516  docker exec worker2 sed -i "s/PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
+  517  docker exec worker1 service ssh restart
+  518  docker exec worker2 service ssh restart
+  519  ssh root@172.17.0.2
+  520  ssh root@172.17.0.3
+  521  vi inventory 
+  522  git pull
+  523  mv inventory inventory1
+  524  git pull
+  525  vi inventory
+  526  ansible --version
+  527  ll
+  528  ansible containers -m ping -u root 
+  529  vi inventory
+  530  ansible docker-container -m ping -u root 
+  531  ansible docker-container -m command -a "uname -a"
+  532  clear
+  533  docker container ls
+  534  clear
+  535  ansible docker-container -m command -a "ping -c 2 google.com"
+  536  ansible docker-container -m command -a "ping -c2 google.com"
+  537  ansible docker-container -m ping
+  538  clear
+  539  whoam
+  540  whoami
+  541  ansible docker-container -m command -a "netstat -tulnp"
+  542  docker exec worker1 netstat -tulnp
+  543  clear
+  544  pwd
+  545  clear
+  546  ansible docker-container -m command -a "netstat -tulnp"
+  547  docker exec worker1 apt-get netstat
+  548  docker container ls
+  549  docker commit -p -m "ubuntu-ssh-ready-image" worker1 ubuntu-ansible-ready-img:v1
+  550  docker run --name worker3 ubuntu-ansible-ready-img:v1
+  551  docker container ls
+  552  docker run -dit --name worker3 ubuntu-ansible-ready-img:v1
+  553  docker start -dit worker3
+  554  docker start -it worker3
+  555  docker start -i worker3
+  556  docker container ls
+  557  history
+  558  docker container ls -a
+  559  docker rm worker3
+  560  docker container ls -a
+  561  docker run -dit --name worker3 ubuntu-ansible-ready-img:v1
+  562  docker container ls
+  563  docker inspect worker3
+  564  clear
+  565  ll
+  566  ansible docker-container -m command -a "netstat -tulnp"
+  567  ssh root@172.17.0.4
+  568  docker exec worker3 ssh restart
+  569  docker exec worker3 service ssh restart
+  570  ssh root@172.17.0.4
+  571  ansible docker-container -m command -a "netstat -tulnp"
+  572  docker exec worker3 apt-get install netstat
+  573  docker exec worker3 apt-get install netstat -y
+  574  docker exec worker3 apt-get install net-tools -y
+  575  ansible docker-container -m command -a "netstat -tulnp"
+  576  docker exec worker1 apt-get install net-tools -y
+  577  docker exec worker2 apt-get install net-tools -y
+  578  ansible docker-container -m command -a "netstat -tulnp"
+  579  docker ps
+  580  docker ps -q
+  581  docker ps worker* -q
+  582  docker ps worker%
+  583  docker ps
+  584  docker ps | grep -i worker
+  585  docker ps | grep -i worker -q
+  586  docker ps -q | grep -i worker
+  587  docker exec worker1 apt-get install iputils-ping -y
+  588  docker exec worker2 apt-get install iputils-ping -y
+  589  docker exec worker3 apt-get install iputils-ping -y
+  590  ansible docker-container -m command -a "ping -c 2 google.com"
+  591  clear
+  592  git statu
+  593  git status\
+  594  vi inventory
+  595  history
+  596  clear
+  597  docker container ls
+  598  docker exec worker3 service status ssh
+  599  docker exec worker3 service status sshd
+  600  docker exec worker3 service status open-ssh
+  601  docker exec worker3 service status openssh
+  602  history
+  603  cd devops301-mindtree-17Oct2020/
+  604  ll
+  605  git pull
+  606  ll
+  607  cd 05-Ansible/
+  608  ll
+  609  cd 03-Tomcat/
+  610  ll
+  611  vi inventory 
+  612  vi webserver.yaml 
+  613  ll files/
+  614  git status
+  615  ll ../../04-Docker/02-Dockerfile/tomcat/petclinic.war
+  616  ll
+  617  cp ../../04-Docker/02-Dockerfile/tomcat/petclinic.war files/petclinic.war 
+  618  ll 
+  619  ll files/
+  620  ll
+  621  docker images
+  622  docker run -dit --name worker1 ubuntu-ansible-ready-img:v1
+  623  docker container ls 
+  624  docker stop artifactory
+  625  docker container
+  626  docker container ls 
+  627  docker container ls -a
+  628  docker run -itd worker1
+  629  docker start -i worker1
+  630  docker container ls 
+  631  docker inspect worker1
+  632  ll
+  633  vi webserver.yaml 
+  634  vi inventory 
+  635  ansible-playbook webserver.yaml 
+  636  ssh root@worker1
+  637  ssh root@172.17.0.2
+  638  ll
+  639  cd ..
+  640  ll
+  641  cd 01-Inventory/
+  642  ll
+  643  vi inventory
+  644  history
+  645  docker exec worker1 service ssh restart
+  646  ssh root@172.17.0.2
+  647  cd ../03-Tomcat/
+  648  ll
+  649  ansible-playbook webserver.yaml 
+  650  curn 172.17.0.2
+  651  curl 172.17.0.2
+  652  docker container
+  653  docker container ls
+  654  docker stop worker1
+  655  docker run -itd --name worker1 -p 30001:80 -p 38081:8080 ubuntu-ansible-ready-img:v1
+  656  docker start -i --name worker1 -p 30001:80 -p 38081:8080
+  657  docker start -i worker1 -p 30001:80 -p 38081:8080
+  658  docker container ls
+  659  docker container ls -a
+  660  docker rm worker1 worker2 worker3
+  661  docker run -itd --name worker1 -p 30001:80 -p 38081:8080 ubuntu-ansible-ready-img:v1
+  662  docker run -itd --name worker2 -p 30002:80 -p 38082:8080 ubuntu-ansible-ready-img:v1
+  663  docker run -itd --name worker3 -p 30003:80 -p 38083:8080 ubuntu-ansible-ready-img:v1
+  664  docker exec worker1 service ssh start
+  665  docker exec worker2 service ssh start
+  666  docker exec worker3 service ssh start
+  667  ll
+  668  vi inventory 
+  669  ansible-playbook webserver.yaml 
+  670  docker inspect worker1 | grep -i ipaddress
+  671  docker inspect worker2 | grep -i ipaddress
+  672  docker inspect worker3 | grep -i ipaddress
+  673  ssh root@172.17.0.3
+  674  ssh-keygen -f "/root/.ssh/known_hosts" -R 172.17.0.3
+  675  ssh root@172.17.0.3
+  676  ansible-playbook webserver.yaml 
+  677  history
+  678  clear
+  679  pwd
+  680  exit
+  681  nohup java -jar jenkins.war --httpPort=9090 > output.txt &
+  682  pwd
+  683  history | grep -i jenkins.war
+  684  pwd
+  685  cd
+  686  cd -
+  687  ll
+  688  nohup  java -jar /root/jenkins.war --httpPort=9090 > output.txt &
+  689  cat /root/.bash
+  690  cat /root/.bashrc
+  691  ll
+  692  ls
+  693  echo "nohup  java -jar /root/jenkins.war --httpPort=9090 > output.txt &" >> dummy.txt
+  694  cat dummy.txt 
+  695  echo "nohup  java -jar /root/jenkins.war --httpPort=9090 > output.txt &" >> /root/.bashrc
+  696  clear
+  697  ps -ef | grep -i jenkins
+  698  ll
+  699  tail -f output.txt 
+  700  echo "<h1> Task Build ID: ${env.BUILD_DISPLAY_NAME}</h1>"
+  701  echo "<h1> Task Build ID: \${env.BUILD_DISPLAY_NAME}</h1>"
+  702  clear
+  703  docker ps
+  704  ll
+  705  ls
+  706  cd devops301-mindtree-17Oct2020/
+  707  ll
+  708  cd 04-Docker/
+  709  ll
+  710  docker ps
+  711  clear
+  712  docker ps
+  713  docker images
+  714  docker run -itd --name worker1 -p 30001:80 -p 38081:8080 ubuntu-ansible-ready-img:v1
+  715  docker start worker1
+  716  docker inspect worker1 | grep -i ipaddress
+  717  ssh root@172.17.0.2
+  718  docker exec worker1 service ssh start
+  719  docker start worker2
+  720  docker start worker3
+  721  docker exec worker2 service ssh start
+  722  docker exec worker3 service ssh start
+  723  ssh root@172.17.0.2
+  724  ssh root@172.17.0.3
+  725  ssh root@172.17.0.4
+  726  ssh root@172.17.0.2
+  727  ssh root@172.17.0.3
+  728  ssh root@172.17.0.4
+  729  pwd
+  730  clear
+  731  exit
+  732  pwd
+  733  clear
+  734  pwd
+  735  clear
+  736  java -version
+  737  mvn -version
+  738  ll /root/
+  739  docker info
+  740  clear
+  741  docker images -ls
+  742  docker images -list
+  743  docker images
+  744  ll /root/
+  745  ps -ef | grep -i jenkins
+  746  pwd
+  747  ll
+  748  cd devops301-mindtree-17Oct2020/
+  749  ll
+  750  cd 04-Docker/
+  751  ll
+  752  cd 03-DockerCompose/Jfrog-Artifact/
+  753  ll
+  754  cat docker-compose.yaml 
+  755  docker-compose up
+  756  history | grep -i docker-compose
+  757  ll
+  758  docker-compose up -d
+  759  docker ps -ef
+  760  docker ps
+  761  cd ../sonarqube/
+  762  ll
+  763  docker-compose up -d
+  764  docker ps
+  765  docker-compose down
+  766  docker ps
+  767  cd ../Jfrog-Artifact/
+  768  ll
+  769  docker-compose down
+  770  cd ../sonarqube/
+  771  docker-compose up -d
+  772  docker ps
+  773  cd ../sonarqube/
+  774  docker-compose up -d
+  775  docker ps
+  776  docker-compose down
+  777  docker-compose up -d
+  778  docker ps
+  779  cd ../Jfrog-Artifact/
+  780  ll
+  781  docker-compose up -d
+  782  docker ps
+  783  docker-compose down
+  784  cd ../sonarqube/
+  785  docker-compose down
+  786  sysctl -w vm.max_map_count=262144
+  787  whoami
+  788  docker-compose up -d
+  789  cd ../Jfrog-Artifact/
+  790  docker-compose up -d
+  791  docker ps
+  792  clear
+  793  pwd
+  794  ll
+  795  git clone https://github.com/kadalisk/DevOps301-Assignment.git
+  796  pwd
+  797  cd DevOps301-Assignment/
+  798  pwd
+  799  ll
+  800  git status
+  801  git fetch
+  802  git status
+  803  git pull
+  804  git status
+  805  git fetch
+  806  git status
+  807  git pull
+  808  docker ps
+  809  cd ..
+  810  ll
+  811  cd devops301-mindtree-17Oct2020/
+  812  ll
+  813  cd 04-Docker/03-DockerCompose/Jfrog-Artifact/
+  814  docker-compose down
+  815  clear
+  816  cd /home/mtadmindev8/
+  817  ll
+  818  cd DevOps301-Assignment/
+  819  ll
+  820  sysctl -w vm.max_map_count=262144
+  821  cd 02-Docker/01-JFrog-Artifact/
+  822  ll
+  823  docker-compose up -d
+  824  cd ../02-SonarQube/
+  825  docker-compose up -d
+  826  docker ps
+  827  clear
+  828  ps -ef | grep -i docker-compose.yamljenkins
+  829  ps -ef | grep -i jenkins
+  830  cd ../03-TomcatAppServer/
+  831  ll
+  832  docker build -t tomcat-base:v1 .
+  833  docker ps
+  834  docker images
+  835  docker run -itd --name worker1 -p 30001:80 -p 38081:8080 tomcat-base:v1
+  836  docker-container list
+  837  docker-container ls
+  838  docker container ls
+  839  docker container ls -a
+  840  docker run -itd --name app-worker1 -p 30001:80 -p 38081:8080 tomcat-base:v1
+  841  docker run -itd --name app-worker2 -p 30002:80 -p 38082:8080 tomcat-base:v1
+  842  docker inspect app-worker1 | grep -i ip
+  843  docker inspect app-worker1 | grep -i ipaddress
+  844  docker inspect app-worker2 | grep -i ipaddress
+  845  clear
+  846  git status
+  847  git fetch
+  848  git status
+  849  git pull
+  850  pwd
+  851  ll
+  852  cd ..
+  853  ll
+  854  cd 03-Ansible
+  855  ll
+  856  git pull
+  857  clear
+  858  cd 01-Tomcat/
+  859  ll
+  860  cd files/
+  861  ll
+  862  cd 00-Application/petclinic-code/
+  863  cd ../..
+  864  cd ..
+  865  cd 00-Application/petclinic-code/
+  866  ll
+  867  cd ../../03-Ansible/01-Tomcat/files/
+  868  ll
+  869  cd ..
+  870  cd..
+  871  cd ..
+  872  ll
+  873  history
+  874  docker ps
+  875  docker exec app-worker1 apt-get update
+  876  docker exec app-worker1 grep -i "PermitRootLogin" /etc/ssh/sshd_config
+  877  docker exec app-worker1 apt-get install python openssh-server openssh-client -y
+  878  docker exec app-worker1 grep -i "PermitRootLogin" /etc/ssh/sshd_config
+  879  ssh root@172.17.0.2
+  880  docker exec app-worker1 grep -i "PermitRootLogin" /etc/ssh/sshd_config
+  881  docker attach app-worker1
+  882  docker start worker1
+  883  docker stop app-worker1
+  884  docker stop app-worker2
+  885  docker start worker1
+  886  docker ps
+  887  docker attach -itd worker1
+  888  docker attach -t worker1
+  889  docker attach worker1
+  890  clear
+  891  docker stop worker1
+  892  docker start app-worker1 app-worker2
+  893  docker attach app-worker1
+  894  docker start -itd app-worker1
+  895  docker run -it app-worker1
+  896  docker start -it app-worker1
+  897  docker start -i app-worker1
+  898  docker attach app-worker1
+  899  hostname
+  900  docker ps
+  901  docker attach app-worker1
+  902  docker attach app-worker2
+  903  docker attach app-worker1
+  904  docker kill app-worker1
+  905  docker kill app-worker2
+  906  docker run -it --name app-worker1 -p 30001:80 -p 38081:8080 tomcat-base:v1
+  907  docker container list -a
+  908  docker rm app-worker1 app-worker2
+  909  docker container list -a
+  910  clear
+  911  docker run -it --name app-worker1 -p 30001:80 -p 38081:8080 tomcat-base:v1
+  912  docker container list
+  913  docker inspect app-worker1 | grep -i ipaddress
+  914  ssh root@172.17.0.2
+  915  docker attach app-worker1
+  916  ls
+  917  cd 01-Tomcat/
+  918  ll
+  919  cd ../../02-Docker/
+  920  ll
+  921  03-TomcatAppServer/
+  922  cd 03-TomcatAppServer/
+  923  ll
+  924  vi Dockerfile 
+  925  docker build -t ubuntu-base:v1 .
+  926  vi Dockerfile 
+  927  docker build -t ubuntu-base:v1 .
+  928  vi Dockerfile 
+  929  docker build -t ubuntu-base:v1 .
+  930  vi Dockerfile 
+  931  docker build -t ubuntu-base:v1 .
+  932  vi Dockerfile 
+  933  docker build -t ubuntu-base:v1 .
+  934  docker rm app-worker1
+  935  docker kill app-worker1
+  936  docker rm app-worker1
+  937  docker run -it --name app-worker1 -p 30001:80 -p 38081:8080 ubuntu-base:v1
+  938  clear
+  939  ssh root@172.17.0.2
+  940  docker exec app-worker1 service ssh restart
+  941  ssh root@172.17.0.2
+  942  ssh-keygen -f "/root/.ssh/known_hosts" -R 172.17.0.2
+  943  ssh root@172.17.0.2
+  944  docker run -it --name app-worker2 -p 30002:80 -p 38082:8080 ubuntu-base:v1
+  945  clear
+  946  ssh root@172.17.0.3
+  947  docker exec app-worker2 service ssh restart
+  948  ssh root@172.17.0.3
+  949  ssh-keygen -f "/root/.ssh/known_hosts" -R 172.17.0.3
+  950  ssh root@172.17.0.3
+  951  docker attach app-worker2
+  952  docker exec app-worker2 service ssh restart
+  953  ssh root@172.17.0.3
+  954  docker exec app-worker2 grep -i "PermitRootLogin" /etc/ssh/sshd_config
+  955  docker exec app-worker2 sed -i "s/PermitRootLogin prohibit-password/PermitRootLogin yes/g" /etc/ssh/sshd_config
+  956  docker exec app-worker2 service ssh restart
+  957  ssh root@172.17.0.3
+  958  clear
+  959  docker ps
+  960  exit
+  961  history | grep -i tomcat
+  962  pwd
+  963  docker ps
+  964  clear
+  965  pwdd
+  966  docker ps
+  967  ll
+  968  sysctl -w vm.max_map_count=262144
+  969  cd devops301-mindtree-17Oct2020/
+  970  cd ..
+  971  cd DevOps301-Assignment/
+  972  ll
+  973  cd 02-Docker/
+  974  ll
+  975  02-SonarQube/
+  976  cd 02-SonarQube/
+  977  docker container list -a
+  978  docker-compose up
+  979  clear
+  980  docker ps
+  981  docker ps
+  982  docker container list -a
+  983  docker start app-worker1 app-worker2
+  984  ssh root@172.17.0.3
+  985  docker exec app-worker2 service ssh restart
+  986  docker exec app-worker1 service ssh restart
+  987  ssh root@172.17.0.3
+  988  ssh root@172.17.0.2
+  989  clear
+  990  ll
+  991  cd DevOps301-Assignment/
+  992  ll
+  993  cd 
+  994  cd -
+  995  ll
+  996  cd 02-Docker
+  997  ll
+  998  cd 03-TomcatAppServer/
+  999  ll
+ 1000  clear
+ 1001  vi Dockerfile 
+ 1002  docker build -t ubuntu-base:v1 .
+ 1003  vi Dockerfile 
+ 1004  clear
+ 1005  docker run busybox nslookup google.com
+ 1006  nmcli dev show | grep 'IP4.DNS'
+ 1007  cat /etc/docker/daemon.json
+ 1008  vi Dockerfile 
+ 1009  docker build -t ubuntu-base:v1 .
+ 1010  vi Dockerfile 
+ 1011  docker build -t ubuntu-base:v1 .
+ 1012  vi Dockerfile 
+ 1013  docker ubuntu-base:v1
+ 1014  vi Dockerfile 
+ 1015  docker build -t ubuntu-base:v1 .
+ 1016  docker run -itd --name app-worker3 -p 30003:80 -p 38083:8080 ubuntu-base:v1
+ 1017  vi Dockerfile 
+ 1018  docker ps
+ 1019  sysctl -w vm.max_map_count=262144
+ 1020  cd ../02-SonarQube/
+ 1021  ll
+ 1022  docker-compose up -d
+ 1023  docker ps
+ 1024  cd
+ 1025  ll
+ 1026  vi .bashrc
+ 1027  cd -
+ 1028  ll
+ 1029  cd ../01-JFrog-Artifact/
+ 1030  ll
+ 1031  vi docker-compose.yaml 
+ 1032  docker ps
+ 1033  cd ../01-JFrog-Artifact/
+ 1034  docker container list
+ 1035  docker stop app-worker3
+ 1036  docker start app-worker1
+ 1037  docker start app-worker2
+ 1038  docker inspect app-worker1 | grep -i docker-compose.yamlipaddress
+ 1039  docker inspect app-worker1 | grep -i ipaddress
+ 1040  docker inspect app-worker2 | grep -i ipaddress
+ 1041  ssh docker-compose.yamlroot@172.17.0.2
+ 1042  docker docker-compose.yamlexec app-worker1 service ssh restart
+ 1043  docker exec app-worker1 service ssh restart
+ 1044  docker exec app-worker2 service ssh restart
+ 1045  pwd
+ 1046  git status
+ 1047  vi 02-Docker/03-TomcatAppServer/Dockerfile
+ 1048  git pull
+ 1049  git stash
+ 1050  git pull
+ 1051  git status
+ 1052  vi 02-Docker/03-TomcatAppServer/Dockerfile
+ 1053  tail -f output.txt 
+ 1054  history
+ 1055  ll
+ 1056  mkdir backup;cd backup
+ 1057  history > history_root.txt
